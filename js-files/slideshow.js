@@ -17,35 +17,22 @@ function pictureLoop() {
         i++
     } else {
         i = 0
-    }   
+    }
 }
 
 let autoStart = setInterval(pictureLoop, 1000);
-let slideStart = document.getElementById('startSlide')
-let slideStop = document.getElementById('stopSlide')
-let slidesMoving = true;
 
-realPic.onclick = function() {
-        console.log('pic stop')
-        clearInterval(autoStart)
-}
-
-slideStart.onclick = function() {
-    setInterval(pictureLoop, 1000)
-    console.log('start')
-};
-
-slideStop.onclick = function() {
-        if(autoStart || pictureLoop)  {
-            clearInterval(autoStart)
-            console.log('button stop')  
-        }
-} 
-
-const showHolder = document.querySelector('.showHolder')
+let showHolder = document.querySelector('#showHolder')
 showHolder.onclick = event => {
-    let target = event.currentTarget
-    if(target === 'showHolder') {
-        console.log('hello')
+    let target = event.target
+    console.log(target)
+
+    if(target.classList.contains('start')) {
+        console.log('start!')
+        setInterval(pictureLoop, 1000);
+    } if(target.classList.contains('stop')) {
+        console.log('stop')
+        clearInterval(autoStart)
     }
 }
+
