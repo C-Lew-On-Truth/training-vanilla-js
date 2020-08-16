@@ -10,9 +10,14 @@ body {
     border: green dashed 5px;
     width: 400px;
     height: 400px;
+    cursor: pointer
 }
 
 img {
     width: 100%;
     height: 100%;
+}
+
+button {
+    cursor: pointer;
 }

@@ -20,21 +20,32 @@ function pictureLoop() {
     }   
 }
 
-let autoStart = setInterval(pictureLoop, 2000);
+let autoStart = setInterval(pictureLoop, 1000);
 let slideStart = document.getElementById('startSlide')
 let slideStop = document.getElementById('stopSlide')
+let slidesMoving = true;
 
 realPic.onclick = function() {
-    clearInterval(autoStart)
-    console.log('picture stop')
+        console.log('pic stop')
+        clearInterval(autoStart)
 }
 
 slideStart.onclick = function() {
-    setInterval(pictureLoop, 2000)
+    setInterval(pictureLoop, 1000)
     console.log('start')
 };
 
 slideStop.onclick = function() {
-    clearInterval(pictureLoop)
-    console.log('button stop')
+        if(autoStart || pictureLoop)  {
+            clearInterval(autoStart)
+            console.log('button stop')  
+        }
+} 
+
+const showHolder = document.querySelector('.showHolder')
+showHolder.onclick = event => {
+    let target = event.currentTarget
+    if(target === 'showHolder') {
+        console.log('hello')
+    }
 }
