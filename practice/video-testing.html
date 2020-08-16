@@ -1,0 +1,40 @@
+<html>
+<title>
+    Testing Video Player
+</title>
+
+<body>
+    <div>
+
+        <button onclick="stopVideo()">
+            STOP
+        </button>
+
+        <video id="video1"  controls>
+            <source src="assets/Channel-4-Sabres-PKG.mp4">
+        </video>
+
+    </div>
+    <script>
+        let vid1 = document.getElementById('video1');
+        
+
+        let holder = {
+            video: vid1
+        }
+
+        let vidArray = [
+            {
+                video: vid1,
+                isPlaying: true
+            }
+        ]
+
+        function stopVideo() {
+           vidArray[0].video.pause()
+        }
+
+    </script>
+</body>
+
+</html>
