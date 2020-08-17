@@ -21,6 +21,7 @@ let pictureLoop = function () {
         } else {
             i = 0
         }
+        
     } 
 }
 
