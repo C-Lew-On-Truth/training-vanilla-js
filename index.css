@@ -4,7 +4,7 @@ body {
 }
 
 .index {
-    margin: 35% auto;
+    margin: 20% auto;
     width: 50%;
     border: orange dashed 2px; 
     display: flex;
