@@ -21,13 +21,12 @@ let pictureLoop = function () {
         } else {
             i = 0
         }
-        
     } 
+    console.log(picArray[i])
 }
 
-let autoStart = setInterval(pictureLoop, 1000);
+let autoStart = setInterval(pictureLoop, 2000);
 let showHolder = document.querySelector('#showHolder');
-
 
 showHolder.onclick = event => {
 
@@ -37,13 +36,18 @@ showHolder.onclick = event => {
 
     if (target.classList.contains('start')) {
         console.log('start!')
-        setInterval(pictureLoop, 1000);
         slidesMoving = true
 
     } else if (target.classList.contains('stop')) {
         console.log('stop')
-        clearInterval(autoStart)
         slidesMoving = false
     }
+ 
+    function checkPic() {
+        if() {
+            console.log('fucking a')
+        }
+    }
+    checkPic()
 }
 

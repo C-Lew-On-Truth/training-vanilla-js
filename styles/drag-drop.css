@@ -1,0 +1,39 @@
+body {
+    background: black;
+    font-family: "Comic Sans MS"
+}
+
+h1 {
+    text-align: center;
+    color: white;
+    font-size: 60px;
+    
+}
+
+.drag-drop-holder {
+    display: flex;
+    flex-direction: row;
+    width: 60%;
+    border: yellow dashed 4px;
+    margin: 5% auto;
+    height: 400px;
+}
+
+.drag-item, .drop-zone {
+    border: white 2px solid;
+    width: 30%;
+    height: 100px;
+    margin: 18% auto;
+}
+
+.drag-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 20px;
+}
+
+.drop-zone {
+   
+}
