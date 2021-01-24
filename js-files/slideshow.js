@@ -44,9 +44,9 @@ showHolder.onclick = event => {
     }
  
     function checkPic() {
-        if() {
+     
             console.log('fucking a')
-        }
+    
     }
     checkPic()
 }

@@ -1,0 +1,15 @@
+.image-preview {
+    width: 300px;
+    height: 300px;
+    border: 2px solid grey;
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.image-preview-pic {
+    display: none;
+    width: 300px;
+    height: 300px;
+}
