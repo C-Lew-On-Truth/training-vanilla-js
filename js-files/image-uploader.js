@@ -32,9 +32,6 @@ showPic.addEventListener('change', showImage)
 document.body.ondragover = (ev) => {
     ev.preventDefault()
     ev.stopPropagation()  
-    const dt = ev.dataTransfer
-    const files = dt.files
-    ev.dataTransfer.setData(files)
 } 
 
 document.body.ondrop = (ev) => {
@@ -42,8 +39,24 @@ document.body.ondrop = (ev) => {
     ev.stopPropagation()
 } 
 picZone.ondrop = (ev) => {
+    const dt = ev.dataTransfer
+    const file = dt.files[0]
+    console.log(file)
 
-    ev.dataTransfer.getData(files)
+    if(file) {
+
+        previewMessage.style.display = 'none';
+        viewImage.style.display = 'block'
+
+        read.addEventListener('load', (ev) => {
+            viewImage.setAttribute('src', ev.target.result); 
+        })
+
+        read.readAsDataURL(file)
+    } else {
+        previewMessage.style.display = null;
+        viewImage.style.display = null
+    }
 }
 
 //picZone.addEventListener('drop', showImage)
