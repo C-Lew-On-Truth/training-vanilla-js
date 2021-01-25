@@ -6,12 +6,22 @@
   </head>
 
   <body>
+
     <h1>Image Uploader</h1>
-    <input type="file" id="show-pic" name="show-pic" />
+
+    <label for='show-pic'>
+        <input type="file" id="show-pic" name="show-pic" size='10'/>
+        Click Here to Upload File
+    </label>
+    
     <div class="image-preview">
       <img src="" class="image-preview-pic" />
-      <span class='preview-message'>Drop Image Here to Preview</span>
+      <span class='preview-message'>DROP ZONE</span>
     </div>
+
+    <span for='show-pic' class= 'preview-message'>
+        Or drag your images into the DROP ZONE!
+    </span>
 
     <script type="text/javascript" src="../js-files/image-uploader.js"></script>
   </body>
