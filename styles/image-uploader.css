@@ -1,8 +1,31 @@
 body {
+    box-sizing: border-box;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    color: white;
+    background: black;
+    font-family: Comic Sans MS;
+}
+
+.title {
+    font-size: 50px;
+    text-shadow: 5px 2px grey;
+}
+
+.uploader {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 90vh;
+}
+
+label span {
+    cursor: pointer
 }
 
 .image-preview {
@@ -22,10 +45,15 @@ body {
 }
 
 label {
-    text-shadow: 2px 2px grey;
-    font-family: Comic Sans Ms;
-    font-size: 25px;
-    font-weight: bold;
+    text-shadow: 5px 2px grey;
+    font-size: 30px;
+    font-weight: heavy;
+}
+
+.message {
+    text-shadow: 5px 2px grey;
+    font-size: 30px;
+    font-weight: heavy;
 }
 
 input {
