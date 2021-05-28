@@ -1,4 +1,5 @@
 (function() {
+
     var httpRequest;
     document.getElementById('ajax-button')
     .addEventListener('click', requestMade);

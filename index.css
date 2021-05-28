@@ -2,21 +2,33 @@ body {
     background: black;
     font-family: "Comic Sans MS";
     color: white; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .index {
-    margin: 50% auto;
-    width: 50%;
+    border: 0;
+    width: 100%;
+    height: 95vh;
     border: orange dashed 2px; 
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-evenly;
 }
 
 button {
+    font-family: "Comic Sans MS";
     background: white;
-    width: 50%;
-    margin: 2% auto;
+    width: 30%;
+    height: 40px;
     font-size: 20px;
     cursor: pointer
+}
+
+.a {
+    color: red;
+    text-decoration: none;
 }

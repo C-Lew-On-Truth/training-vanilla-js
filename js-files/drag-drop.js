@@ -10,13 +10,11 @@ drag.ondragstart = event => {
 
 drag.ondrag = event => {
     let target = event.currentTarget
-    console.log('draggging now')
     dragging = true
     if(dragging === true) {
         target.style.color = 'blue';
         target.style.display = 'none'
     } 
-    console.log(dragging)
 }
 
 document.ondragend = event => {
@@ -25,14 +23,11 @@ document.ondragend = event => {
     if(dragging === false) {
         drag.style.display = 'block'
     }
-    console.log('stopped dragging')
-    console.log(dragging)
 }
 
 
 drop.ondragover = event => {
     event.preventDefault()
-    console.log('dragged over')
 }
 
 drop.ondrop = event => {   
@@ -43,5 +38,4 @@ drop.ondrop = event => {
         event.dataTransfer.clearData()
         dragItem.style.display = 'block'
         dragItem.style.display = 'red'
-        console.log('dropped')
 }
